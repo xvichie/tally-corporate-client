@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard";
 
 function Services() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center bg-white">
       <div className="wrapper">
         <div className="my-28">
           <h1 className="text-center text-main-blue text-3xl lg:text-6xl font-extrabold">

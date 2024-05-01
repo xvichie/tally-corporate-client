@@ -161,7 +161,7 @@ function Footer() {
           </nav>
         </div>
       </footer>
-      <footer className="footer py-4 border-t text-base-content border-base-300 flex flex-row justify-center items-center">
+      <footer className="footer py-4 border-t text-base-content border-base-300 flex flex-row justify-center items-center bg-white">
         <div className="wrapper flex flex-col lg:flex-row justify-between items-center">
           <aside className="items-center flex flex-col lg:flex-row justify-between">
             <img

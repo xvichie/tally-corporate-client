@@ -37,17 +37,17 @@ function Projects() {
 
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center bg-white">
       <div className="wrapper flex flex-col items-center">
         <div className="my-16 gap-8 xl:flex xl:flex-row xl:justify-between items-center">
           <div className="flex flex-col text-left -translate-y-14 lg:-translate-y-0">
             <h4 className="text-md font-bold text-main-blue lg:text-2xl">
               ჩვენი ნამუშევრები
             </h4>
-            <h1 className="text-3xl font-extrabold my-2 lg:text-7xl">
+            <h1 className="text-3xl font-extrabold my-2 lg:text-7xl text-bg-black">
               ნახე ჩვენი <br /> დასრულებული <br /> ნამუშევრები
             </h1>
-            <h3 className="text-lg my-2 lg:text-xl">
+            <h3 className="text-lg my-2 lg:text-xl text-text-gray">
               ჩვენი საკუთარი და სხვა კომპანიის ციფრული პროდუქტები, რომლებიც ყოველდღიურად ამტკიცებენ ჩვენ შესაძლებლობებს.
             </h3>
           </div>

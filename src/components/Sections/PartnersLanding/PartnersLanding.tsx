@@ -2,7 +2,7 @@ import React from 'react'
 
 function PartnersLanding() {
   return (
-    <div className='my-8 flex justify-center'>
+    <div className='py-8 flex justify-center bg-white'>
         <div className="wrapper">
             <h1 className='font-bold text-center text-main-blue text-3xl lg:text-4xl my-8'>ჩვენი პარტიორები</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 my-4'>

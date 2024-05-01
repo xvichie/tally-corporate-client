@@ -49,7 +49,7 @@ function Header() {
     <>
       <div
         className={`bg-${
-          !scrolled ? "transparent" : "white"
+          !scrolled ? "white" : "white"
         } w-full flex flex-row justify-center items-center transition-all duration-150 ease-in h-24 px-4 text-white fixed z-50 shadow-${
           !scrolled ? "sm" : "lg"
         }`}
@@ -72,7 +72,7 @@ function Header() {
             )}
           </Link>
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex">
+          <ul className="hidden xl:flex">
             <Link to={"/services"}>
               <li
                 className={`relative p-4 rounded-xl m-2 cursor-pointer duration-300 
@@ -138,10 +138,10 @@ function Header() {
               </li>
             </Link>
           </ul>
-          <div className="hidden lg:flex flex-row justify-center align-middle text-center items-center">
+          <div className="hidden xl:flex flex-row justify-center align-middle text-center items-center">
             <button
               className={`btn btn-outline my-4 w-8/12 text-xs mr-4 p-2
-            text-black
+            text-main-blue
              hover:bg-main-blue hover:text-white`}
             >
               <MdMessage></MdMessage>
@@ -151,7 +151,7 @@ function Header() {
               className={`btn btn-outline w-5/12 text-xs p-2 
                text-white
                bg-main-blue
-               hover:bg-black
+               hover:bg-yellow-500
               `}
             >
               <LuPencilRuler></LuPencilRuler>
@@ -161,7 +161,7 @@ function Header() {
         </div>
 
         {/* Mobile Navigation Icon */}
-        <div onClick={handleNav} className="block lg:hidden z-50">
+        <div onClick={handleNav} className="block xl:hidden z-50">
           {/* {nav ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />} */}
           <Hamburger
             toggled={nav}

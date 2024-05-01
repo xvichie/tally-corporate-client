@@ -27,7 +27,7 @@ function Careers() {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white">
       <div className="flex flex-col gap-8 my-24 items-center w-full">
         <div className="wrapper flex flex-row">
           <div className="flex flex-row justify-between gap-32 w-full">
@@ -40,7 +40,7 @@ function Careers() {
             />
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-center xl:text-left text-4xl lg:text-5xl w-full">
+                <h1 className="font-bold text-center xl:text-left text-4xl lg:text-5xl w-full text-main-blue">
                   ნახე თავისუფალი პოზიციები
                 </h1>
                 <h3 className="font-semibold text-center xl:text-left text-md lg:text-lg text-text-gray">

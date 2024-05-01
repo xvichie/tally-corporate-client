@@ -22,7 +22,7 @@ function MainLandingAlternate() {
                 ჩაგვაბარე შენი პრობლემები ჩვენ და გააციფრულე შენი მცირე თუ საშუალო ბიზნესი!
               </h3>
               <button className="btn btn-md mt-8 lg:mt-16 w-[200px] bg-main-orange text-white
-              hover:bg-main-cream
+              hover:bg-yellow-500
               ">
                 დაგვიკავშირდი
               </button>

@@ -28,17 +28,17 @@ function ServiceCard({ tier, price, description, perks, isPopular }: ServiceCard
           <h4 className="text-lg text-text-gray font-bold">ფასი</h4>
           <h2 className="font-bold text-main-blue text-4xl">{price === 0 ? "უფასო" : `₾${price}-დან`}</h2>
         </div>
-        <h5 className="text-left my-4">{description}</h5>
+        <h5 className="text-left my-4 text-text-gray">{description}</h5>
         <div className="text-left w-full">
           <button className="btn btn-md my-2 bg-main-blue text-white">მოგვწერე</button>
         </div>
         <div className="grid gap-4 my-4">
           {perks.map((perk, index) => (
             <div key={perk + index} className="flex items-center gap-2">
-              <span className="flex flex-col justify-center">
+              <span className="flex flex-col justify-center text-main-blue">
                 <FaRegCircleCheck size={"24px"} className="" />
               </span>
-              <h4 className="text-md text-left">{perk}</h4>
+              <h4 className="text-md text-left text-text-gray">{perk}</h4>
             </div>
           ))}
         </div>
