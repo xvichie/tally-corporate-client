@@ -6,20 +6,19 @@ function ServicesLanding() {
       <div className="wrapper flex justify-between gap-4 items-center">
         <div className="flex flex-col">
           <h4 className="text-xl font-bold text-main-blue text-left my-2">
-            Find An Oppening
+            ყველაფერი, რაც გჭირდება
           </h4>
-          <h2 className="text-5xl lg:text-6xl font-bold text-left mb-8 mt-2">
-            Jobs For Everybody For Results
+          <h2 className="text-4xl lg:text-5xl font-bold text-left mb-8 mt-2">
+            ნახე ჩვენი სერვისები და აირჩიე რაც გჭირდება
           </h2>
           <h5 className="text-xl text-left">
-            We believe in turning good ideas into powerful brands. Our purpose
-            is simple - to help organisations and people flourish.
+            ჩვენ გვჯერა კარგი იდეების კარგ პროდუქტებად გადაქცევაში.
           </h5>
           <span className="text-left my-6">
             <button className="btn mr-4 bg-main-blue text-white">
-              Try It Now
+              სერვისების ნახვა
             </button>
-            <button className="btn btn-outline">Try It Now</button>
+            {/* <button className="btn btn-outline">Try It Now</button> */}
           </span>
         </div>
         <div className="flex items-center w-[60%] justify-center">

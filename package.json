@@ -10,6 +10,7 @@
     "@types/node": "^16.18.96",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
+    "firebase": "^10.11.0",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.9",
@@ -45,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@types/firebase": "^3.2.1",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
     "postcss": "^8.4.38",

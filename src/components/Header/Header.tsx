@@ -50,22 +50,24 @@ function Header() {
       <div
         className={`bg-${
           !scrolled ? "transparent" : "white"
-        } w-full flex flex-row justify-center items-center transition-all duration-150 ease-in h-24 px-4 text-white fixed z-50`}
+        } w-full flex flex-row justify-center items-center transition-all duration-150 ease-in h-24 px-4 text-white fixed z-50 shadow-${
+          !scrolled ? "sm" : "lg"
+        }`}
       >
-        <div className="wrapper lg:w-11/12 flex flex-row justify-between items-center transition-all duration-300 ease-in">
+        <div className="wrapper flex flex-row justify-between items-center transition-all duration-300 ease-in">
           {/* Logo */}
           <Link to={"/"}>
             {!scrolled ? (
               <img
-                src={process.env.PUBLIC_URL + "/images/Logo-black-Text.png"}
+                src={process.env.PUBLIC_URL + "/images/tally-logo.png"}
                 alt="Ghost Logo"
-                className="h-16 transition-all duration-300 ease-in"
+                className="h-12 transition-all duration-300 ease-in"
               />
             ) : (
               <img
-                src={process.env.PUBLIC_URL + "/images/Logo-Black-Text.png"}
+                src={process.env.PUBLIC_URL + "/images/tally-logo.png"}
                 alt="Ghost Logo"
-                className="h-16 transition-all duration-300 ease-in"
+                className="h-12 transition-all duration-300 ease-in"
               />
             )}
           </Link>
@@ -103,6 +105,7 @@ function Header() {
                 ></div>
               </li>
             </Link>
+            <Link to={'/careers'}>
             <li
               className={`relative p-4 rounded-xl m-2 cursor-pointer duration-300 
                  sm:text-sm font-bold
@@ -117,6 +120,7 @@ function Header() {
                     origin-left transition-transform duration-300 transform group-hover:scale-x-100`}
               ></div>
             </li>
+            </Link>
             <Link to={'/about'}>
               <li
                 className={`relative p-4 rounded-xl m-2 cursor-pointer duration-300 
@@ -178,7 +182,7 @@ function Header() {
         >
           {/* Mobile Logo */}
           <img
-            src={process.env.PUBLIC_URL + "/images/Logo-Black-Text.png"}
+            src={process.env.PUBLIC_URL + "/images/tally-logo.png"}
             alt="Ghostwriter"
             className="h-16 w-fit m-2"
           />

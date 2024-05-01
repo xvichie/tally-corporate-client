@@ -11,6 +11,7 @@ import Home from "./screens/Home/Home";
 import Services from "./screens/Services/Services";
 import Projects from "./screens/Projects/Projects";
 import AboutUs from "./screens/AboutUs/AboutUs";
+import Careers from "./screens/Careers/Careers";
 
 
 function AppRouter() {
@@ -20,6 +21,7 @@ function AppRouter() {
         <Route index={true} path="/" element={<Home />}></Route>
         <Route index={true} path="/services" element={<Services />}></Route>
         <Route index={true} path="/projects" element={<Projects />}></Route>
+        <Route index={true} path="/careers" element={<Careers />}></Route>
         <Route index={true} path="/about" element={<AboutUs />}></Route>
       </Route>
     )

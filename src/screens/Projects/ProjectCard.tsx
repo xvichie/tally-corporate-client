@@ -1,25 +1,22 @@
 import React from "react";
+import Project from "../../types/Project";
 
-interface ProjectCardInterface {
-  imgUrl: string;
-  title: string;
-}
 
-function ProjectCard({ imgUrl, title }: ProjectCardInterface) {
+function ProjectCard( project: Project) {
   return (
-    <div className="w-full max-h-96 overflow-hidden relative group">
+    <div className="w-full max-h-96 overflow-hidden relative group hover:cursor-pointer">
       <img
-        src={imgUrl}
-        alt={title} // More contextually relevant alt text
-        className="w-full max-h-96 rounded-lg object-cover 
-        group-hover:scale-125 group-hover:cursor-pointer 
-        transition-transform duration-300 ease-in-out"
+        src={project.thumbnailUrl}
+        alt={project.title} // More contextually relevant alt text
+        className="w-full max-h-96 rounded-lg object-cover
+        group-hover:scale-125 group-hover: group-hover:blur-lg
+        transition-all duration-300 ease-in-out"
       />
       <h3 className="absolute inset-0 items-center justify-center
       hidden group-hover:flex
       transition-all duration-300 ease-in
-      text-3xl font-bold text-white text-center p-4">
-        {title}
+      text-xl font-bold text-white text-center p-4">
+        {project.title}
       </h3>
     </div>
   );

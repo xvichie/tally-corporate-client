@@ -6,60 +6,57 @@ function Services() {
     <div className="flex flex-col items-center">
       <div className="wrapper">
         <div className="my-28">
-          <h1 className="text-center text-5xl lg:text-7xl font-extrabold">
-            The right plan <br className="lg:hidden" /> for your <br /> business
+          <h1 className="text-center text-3xl lg:text-6xl font-extrabold">
+            სწორი გადაწყვეტილება <br className="lg:hidden" /> შენი პატარა <br /> ბიზნესისათვის
           </h1>
           <h3 className="text-center text-xl my-4">
-            We are a small team of digital marketing experts supporting your
-            businesses growth. Let’s connect and let us help you grow.
+            ჩვენ გთავაზობთ საუკეთესო თქვენთვის საუკეთესო მომსხარუბას შეღავათაინ ფასად.
           </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           <ServiceCard
-            tier="Basic"
-            description="We Will Help You Choose Your Solution For a Problem"
+            tier="კონსულტაცია"
+            description="მოგვიყევით თქვენი ამოცანა და ჩვენ ამოხსნის გზას მოგცემთ"
             price={0}
             perks={[
-              "ez solution for your business",
-              "identify your needs and problems before solving them",
-              "Affordable Pricing For Small And Medium Businesses",
-              "Top Quality Solutions"
+              "დაჯავშნე კონსულტაცია უფასოდ და მიიღე გადაწყვეტილებები",
+              "გამოცდილი გუნდი",
+              
             ]}
             isPopular={false}
           />
           <ServiceCard
-            tier="Basic"
-            description="We Will Help You Choose Your Solution For a Problem"
-            price={0}
+            tier="ვებ დეველოპმენტი"
+            description="ნებისმიერი საიტის თუ ვებ სივრცის აწყობა, გაშვება და ტექნუკური მომსახურება."
+            price={200}
             perks={[
-              "ez solution for your business",
-              "identify your needs and problems before solving them",
-              "Affordable Pricing For Small And Medium Businesses",
-              "Top Quality Solutions"
+              "Front-End დეველოპმენტი",
+              "Back-End დეველოპმენტი",
+              "საიტის და UI/UX დიზაინი",
+              "DevOps, ჰოსტინგი, SEO ოპტიმიზაცია"
+            ]}
+            isPopular
+          />
+          <ServiceCard
+            tier="ზოგადი დეველოპმენტი"
+            description="ჩვენ დაგეხმარებით თქვენთვის შევქმნათ პროგრამები, რომლებიც ცხოვრებას გაგიადვილებთ"
+            price={300}
+            perks={[
+              "აუტომატიზაციები თქვენი ბიზნესისათვის",
+              "ბაზები და ბაზების მართვის სისტემები",
+              "სხვადასხვა მოწყობილობები და მათი მართვა",
             ]}
             isPopular={false}
           />
           <ServiceCard
-            tier="Basic"
-            description="We Will Help You Choose Your Solution For a Problem"
-            price={0}
+            tier="Mobile დეველოპმენტი"
+            description="თქვენთვის სასურველი მობილური აპლიკაციის შექმნა და ტექნიკური მომსახურება"
+            price={1500}
             perks={[
-              "ez solution for your business",
-              "identify your needs and problems before solving them",
-              "Affordable Pricing For Small And Medium Businesses",
-              "Top Quality Solutions"
-            ]}
-            isPopular={true}
-          />
-          <ServiceCard
-            tier="Basic"
-            description="We Will Help You Choose Your Solution For a Problem"
-            price={0}
-            perks={[
-              "ez solution for your business",
-              "identify your needs and problems before solving them",
-              "Affordable Pricing For Small And Medium Businesses",
-              "Top Quality Solutions"
+              "Android დეველოპმენტი",
+              "IOS დეველოპმენტი",
+              "არსებული აპლიკაციის მოვლა ან თავიდან გადაწერა",
+              "აპლიკაციის პლატფორმებზე წარმატებით ჩაშვება"
             ]}
             isPopular={false}
           />
