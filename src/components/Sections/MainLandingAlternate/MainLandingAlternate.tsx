@@ -12,7 +12,7 @@ function MainLandingAlternate() {
             alt="Tailwind CSS Carousel component"
           />
           <div className="wrapper h-full absolute">
-            <div className="absolute left-0 flex h-full flex-col justify-center max-w-[100%] lg:max-w-[40%]">
+            <div className="absolute left-0 flex h-full flex-col justify-center max-w-[100%] lg:max-w-[40%] -translate-y-4">
               <h1 className="text-3xl lg:text-5xl font-bold text-white relative pb-2
               ">
                 ვებ-დეველოპმენტი
@@ -21,7 +21,9 @@ function MainLandingAlternate() {
               <h3 className="text-white mt-4">
                 ჩაგვაბარე შენი პრობლემები ჩვენ და გააციფრულე შენი მცირე თუ საშუალო ბიზნესი!
               </h3>
-              <button className="btn btn-md mt-8 lg:mt-16 w-[200px]">
+              <button className="btn btn-md mt-8 lg:mt-16 w-[200px] bg-main-orange text-white
+              hover:bg-main-cream
+              ">
                 დაგვიკავშირდი
               </button>
             </div>

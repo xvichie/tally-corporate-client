@@ -21,16 +21,16 @@ function ServiceCard({ tier, price, description, perks, isPopular }: ServiceCard
     >
       <div className="mobile_wrapper h-[90%]">
         <div className="w-full flex justify-between items-center">
-            <h3 className="text-2xl font-bold text-left">{tier}</h3>
-            {isPopular && <h3 className=" text-white bg-accent-popular py-2 px-4 rounded-lg">პოპულარული</h3>}
+            <h3 className="text-2xl font-bold text-left text-main-blue">{tier}</h3>
+            {isPopular && <h3 className=" text-white bg-main-orange py-2 px-4 rounded-lg">პოპულარული</h3>}
         </div>
         <div className="text-left my-4">
-          <h4 className="text-xl">ფასი</h4>
-          <h2 className="font-bold text-4xl">{price === 0 ? "უფასო" : `₾${price}-დან`}</h2>
+          <h4 className="text-lg text-text-gray font-bold">ფასი</h4>
+          <h2 className="font-bold text-main-blue text-4xl">{price === 0 ? "უფასო" : `₾${price}-დან`}</h2>
         </div>
         <h5 className="text-left my-4">{description}</h5>
         <div className="text-left w-full">
-          <button className="btn btn-md my-2 bg-bg-black text-white">მოგვწერე</button>
+          <button className="btn btn-md my-2 bg-main-blue text-white">მოგვწერე</button>
         </div>
         <div className="grid gap-4 my-4">
           {perks.map((perk, index) => (

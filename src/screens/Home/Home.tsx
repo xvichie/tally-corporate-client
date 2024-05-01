@@ -10,12 +10,14 @@ import ServicesLanding from "../../components/Sections/ServicesLanding/ServicesL
 import ProjectsLanding from "../../components/Sections/ProjectsLanding/ProjectsLanding";
 import ProjectShowcaseLanding from "../../components/Sections/ProjectShowcaseLanding/ProjectShowcaseLanding";
 import MainLandingAlternate from "../../components/Sections/MainLandingAlternate/MainLandingAlternate";
+import MainLandingBigStats from "../../components/Sections/MainLandingBigStats/MainLandingBigStats";
 
 function Home() {
   return (
     <div>
       <MainLandingAlternate></MainLandingAlternate>
       {/* <MainLanding /> */}
+      <MainLandingBigStats />
       <StatsLanding />
       <VideoSectionLanding />
       {/* <ProjectShowcaseLanding /> */}

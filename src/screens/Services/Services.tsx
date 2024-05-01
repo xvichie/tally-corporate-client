@@ -6,14 +6,14 @@ function Services() {
     <div className="flex flex-col items-center">
       <div className="wrapper">
         <div className="my-28">
-          <h1 className="text-center text-3xl lg:text-6xl font-extrabold">
+          <h1 className="text-center text-main-blue text-3xl lg:text-6xl font-extrabold">
             სწორი გადაწყვეტილება <br className="lg:hidden" /> შენი პატარა <br /> ბიზნესისათვის
           </h1>
-          <h3 className="text-center text-xl my-4">
+          <h3 className="text-center text-text-gray text-xl my-4">
             ჩვენ გთავაზობთ საუკეთესო თქვენთვის საუკეთესო მომსხარუბას შეღავათაინ ფასად.
           </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
           <ServiceCard
             tier="კონსულტაცია"
             description="მოგვიყევით თქვენი ამოცანა და ჩვენ ამოხსნის გზას მოგცემთ"

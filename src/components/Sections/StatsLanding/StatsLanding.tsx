@@ -2,7 +2,7 @@ import React from "react";
 
 function StatsLanding() {
   return (
-    <div className="flex flex-col items-center py-8">
+    <div className="flex flex-col items-center py-8 bg-main-white">
       <div className="wrapper flex flex-col gap-4 lg:flex-row lg:justify-between">
         <div className="flex items-center">
           <img

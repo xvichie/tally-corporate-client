@@ -68,7 +68,7 @@ function Careers() {
         <div className="flex flex-col gap-8 items-center bg-bg-black w-full py-32">
           <div className="wrapper"> 
             <div className="flex flex-col my-6">
-              <h4 className="text-main-light-blue text-2xl font-bold mb-2 lg:text-3xl">
+              <h4 className="text-main-blue text-2xl font-bold mb-2 lg:text-3xl">
                 იპოვე შენთვის სასურველი სამსახური
               </h4>
               <h1 className="text-white text-4xl font-bold my-6 lg:text-6xl">
