@@ -61,6 +61,12 @@ function AboutUs() {
               bg-main-blue text-white
               hover:bg-yellow-500 hover:text-black
               "
+              onClick={() => {
+                const element = document.getElementById(`footer-contact`);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               >
                 მოგვწერე
               </button>

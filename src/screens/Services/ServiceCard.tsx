@@ -33,7 +33,14 @@ function ServiceCard({ tier, price, description, perks, isPopular }: ServiceCard
         </div>
         <h5 className="text-left my-4 text-text-gray">{description}</h5>
         <div className="text-left w-full">
-          <button className="btn btn-md my-2 bg-main-blue text-white">მოგვწერე</button>
+          <button className="btn btn-md my-2 bg-main-blue text-white"
+          onClick={() => {
+            const element = document.getElementById(`footer-contact`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          >მოგვწერე</button>
         </div>
         <div className="grid gap-4 my-4">
           {perks.map((perk, index) => (

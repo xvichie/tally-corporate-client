@@ -23,7 +23,14 @@ function MainLandingAlternate() {
               </h3>
               <button className="btn btn-md mt-8 lg:mt-16 w-[200px] bg-main-orange text-white
               hover:bg-yellow-500
-              ">
+              "
+              onClick={() => {
+                const element = document.getElementById(`footer-contact`);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              >
                 დაგვიკავშირდი
               </button>
             </div>

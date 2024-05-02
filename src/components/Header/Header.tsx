@@ -143,6 +143,12 @@ function Header() {
               className={`btn btn-outline my-4 w-8/12 text-xs mr-4 p-2
             text-main-blue
              hover:bg-main-blue hover:text-white`}
+             onClick={() => {
+              const element = document.getElementById(`footer-contact`);
+              if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             >
               <MdMessage></MdMessage>
               დაგვეკონტაქტეთ
