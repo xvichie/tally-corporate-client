@@ -41,12 +41,13 @@ function Projects() {
       <div className="wrapper flex flex-col items-center">
         <div className="my-16 gap-8 xl:flex xl:flex-row xl:justify-between items-center">
           <div className="flex flex-col text-left -translate-y-14 lg:-translate-y-0">
-            <h4 className="text-md font-bold text-main-blue lg:text-2xl">
+            <h4 className="text-md font-bold text-main-orange lg:text-2xl">
               ჩვენი ნამუშევრები
             </h4>
-            <h1 className="text-3xl font-extrabold my-2 lg:text-7xl text-bg-black">
+            <h1 className="text-3xl font-extrabold my-2 lg:text-7xl text-main-blue">
               ნახე ჩვენი <br /> დასრულებული <br /> ნამუშევრები
             </h1>
+            <div className="w-11/12 h-1 bg-yellow-500 rounded-3xl mb-4"></div>
             <h3 className="text-lg my-2 lg:text-xl text-text-gray">
               ჩვენი საკუთარი და სხვა კომპანიის ციფრული პროდუქტები, რომლებიც ყოველდღიურად ამტკიცებენ ჩვენ შესაძლებლობებს.
             </h3>
@@ -66,7 +67,9 @@ function Projects() {
           <Spinner />
         ) : (
           <div className="flex flex-col gap-12 my-16">
-            <h1 className="text-left text-4xl font-bold text-main-blue">ჩვენი პროექტები</h1>
+            <div>
+              <h1 className="text-left text-4xl font-bold text-main-blue">ჩვენი პროექტები</h1>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <ProjectCard

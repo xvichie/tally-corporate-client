@@ -66,7 +66,7 @@ function MainLandingBigStats() {
                     </div>
                     <div className='bg-main-orange py-8 flex flex-col justify-center w-[1/2] items-center'>
                         <div className="wrapper flex flex-col items-center">
-                            <h1 className='text-white font-bold text-sm md:text-md lg:text-lg text-center'>მიმდინარე <br />პროექტები</h1>
+                            <h1 className='text-white font-bold text-md lg:text-md text-center'>მიმდინარე <br />პროექტები</h1>
                             <h1 className='text-white font-bold text-7xl'>3</h1>
                         </div>
                     </div>

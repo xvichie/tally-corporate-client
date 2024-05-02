@@ -23,7 +23,7 @@ function CareerCard(career: Career) {
                 </div>
             </div>
             <div className='flex flex-col justify-center w-full lg:w-1/12 mt-8 lg:mt-0'>
-                <button className='btn btn-md'>
+                <button className='btn btn-md bg-yellow-500 text-black'>
                     ვრცლად
                 </button>
             </div>

@@ -12,17 +12,18 @@ function ProjectsLanding() {
           />
         </div>
         <div className="flex flex-col">
-          <h4 className="text-xl font-bold text-main-blue text-left my-2">
+          <h4 className="text-xl font-bold text-yellow-500 text-left my-2">
             ჩვენი ნამუშევრები
           </h4>
-          <h2 className="text-4xl lg:text-5xl font-bold text-left mb-8 mt-2 text-white">
+          <h2 className="text-4xl lg:text-5xl font-bold text-left mb-2 mt-2 text-white">
             ნახე ჩვენი პროდუქტები და პროექტები
           </h2>
+          <div className="w-10/12 h-1 bg-yellow-500 rounded-3xl mb-4"></div>
           <h5 className="text-xl text-left text-text-gray">
             მიეცი უფლება ჩვენ პორტფოლიოს, რომ ისაუბროს ჩვენს შესაძლებლობებზე
           </h5>
           <span className="text-left my-6">
-            <button className="btn mr-4 bg-main-blue text-white">
+            <button className="btn mr-4 bg-yellow-500 text-white">
               პროექტების ნახვა
             </button>
             {/* <button className="btn btn-outline bg-white">Try It Now</button> */}

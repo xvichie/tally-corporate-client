@@ -8,9 +8,10 @@ function ServicesLanding() {
           <h4 className="text-xl font-bold text-main-blue text-left my-2">
             ყველაფერი, რაც გჭირდება
           </h4>
-          <h2 className="text-4xl lg:text-5xl text-black font-bold text-left mb-8 mt-2">
+          <h2 className="text-4xl lg:text-5xl text-black font-bold text-left mb-2 mt-2">
             ნახე ჩვენი სერვისები და აირჩიე რაც გჭირდება
           </h2>
+          <div className="w-10/12 h-1 bg-yellow-500 rounded-3xl mb-4"></div>
           <h5 className="text-xl text-text-gray text-left">
             ჩვენ გვჯერა კარგი იდეების კარგ პროდუქტებად გადაქცევაში.
           </h5>

@@ -5,9 +5,9 @@ function ReviewCard() {
   return (
     <div className="flex justify-center items-center bg-white rounded-2xl border-black border-2 h-[464px] lg:h-96">
       <div className="py-10 p-8 flex flex-col justify-between h-full w-full">
-        <div className="flex justify-start">
+        <div className="flex justify-start -translate-x-3">
           <BiSolidQuoteSingleRight className="text-black w-10 h-10" />
-          <BiSolidQuoteSingleRight className="text-black w-10 h-10 " />
+          <BiSolidQuoteSingleRight className="text-black w-10 h-10 -translate-x-4 " />
         </div>
         <p className="text-xl my-4 text-justify">
           The SolarOne team has been a pleasure to work with. Their knowledge of

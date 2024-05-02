@@ -21,7 +21,10 @@ function ServiceCard({ tier, price, description, perks, isPopular }: ServiceCard
     >
       <div className="mobile_wrapper h-[90%]">
         <div className="w-full flex justify-between items-center">
-            <h3 className="text-2xl font-bold text-left text-main-blue">{tier}</h3>
+            <div className="flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-left text-main-blue mb-0">{tier}</h3>
+              <div className="w-full h-1 bg-yellow-500 rounded-3xl mb-4"></div>
+            </div>
             {isPopular && <h3 className=" text-white bg-main-orange py-2 px-4 rounded-lg">პოპულარული</h3>}
         </div>
         <div className="text-left my-4">

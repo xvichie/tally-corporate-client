@@ -10,9 +10,10 @@ function AboutUs() {
     <div className="flex flex-col items-center bg-white">
       <div className="flex flex-col gap-8 my-24 items-center">
         <div className="wrapper">
-          <h1 className="font-extrabold text-4xl lg:text-5xl text-center lg:text-left mb-8 text-main-blue">
+          <h1 className="font-extrabold text-4xl lg:text-5xl text-center lg:text-left mb-2 text-main-blue">
             ვინ ვართ ჩვენ?
           </h1>
+          <div className="w-11/12 lg:w-4/12 h-1 bg-yellow-500 rounded-3xl mb-8"></div>
           <div className="flex flex-row justify-between gap-32">
             <img
               src={
@@ -58,8 +59,7 @@ function AboutUs() {
               <button
                 className="btn w-full my-6 lg:mb-0
               bg-main-blue text-white
-              hover:bg-blue-500
-              transition-all duration-150 ease-in
+              hover:bg-yellow-500 hover:text-black
               "
               >
                 მოგვწერე
