@@ -8,7 +8,7 @@ function MainLandingAlternate() {
           <img
             id="slide#1"
             src={process.env.PUBLIC_URL + "/images/background/background-1.png"}
-            className="w-full object-cover brightness-[70%] lg:brightness-[85%] h-full"
+            className="w-full object-cover brightness-[80%] lg:brightness-[95%] h-full"
             alt="Tailwind CSS Carousel component"
           />
           <div className="wrapper h-full absolute">

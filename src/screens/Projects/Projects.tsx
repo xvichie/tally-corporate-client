@@ -24,6 +24,7 @@ function Projects() {
           title: data.title, // ensure these fields match your Firestore document structure
           description: data.description,
           thumbnailUrl: data.thumbnailUrl,
+          link: data.link
           // startDate,
           // endDate,
         };
@@ -77,6 +78,7 @@ function Projects() {
                   title={project.title}
                   description={project.description}
                   thumbnailUrl={project.thumbnailUrl}
+                  link={project.link}
                 />
               ))}
             </div>

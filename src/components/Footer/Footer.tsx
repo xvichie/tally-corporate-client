@@ -155,18 +155,18 @@ function Footer() {
               >
                 ჩვენ შესახებ
               </Link>
-              <Link
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 უსაფრთხოების პოლიტიკა
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 მომსახურების პირობები
-              </Link>
+              </Link> */}
             </div>
           </nav>
           <nav className="flex flex-col">
@@ -242,12 +242,12 @@ function Footer() {
               >
                 კონტაქტი
               </Link>
-              <Link
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 LinkedIn
-              </Link>
+              </Link> */}
             </div>
           </nav>
         </div>
@@ -261,7 +261,7 @@ function Footer() {
               className="h-12"
             />
             <p className="ml-4">
-              tally © იმედდასაყრდნობი ტექ გადაწყვეტილებები 2023-წლიდან.
+              tally © საიმედო ტექ გადაწყვეტილებები 2023-წლიდან.
             </p>
           </aside>
           <nav className="md:place-self-center md:justify-self-end">

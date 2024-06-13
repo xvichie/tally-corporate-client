@@ -7,21 +7,21 @@ function Services() {
       <div className="wrapper">
         <div className="my-28">
           <h1 className="text-center text-main-blue text-3xl lg:text-6xl font-extrabold">
-            სწორი გადაწყვეტილება <br className="lg:hidden" /> შენი პატარა <br /> ბიზნესისათვის
+            გააციფრულე შენი <br className="lg:hidden" /> მცირე თუ საშუალო ბიზნესი <br />
           </h1>
           <h3 className="text-center text-text-gray text-xl my-4">
-            ჩვენ გთავაზობთ საუკეთესო თქვენთვის საუკეთესო მომსხარუბას შეღავათაინ ფასად.
+            ჩვენ გთავაზობთ თქვენზე მორგებულ და ხარისხიან მომსხარუბას შეღავათაინ ფასად.
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-16">
           <ServiceCard
             tier="კონსულტაცია"
-            description="მოგვიყევით თქვენი ამოცანა და ჩვენ ამოხსნის გზას მოგცემთ"
+            description="გაგვაცანი შენი ამოცანა და ჩვენ ამოხსნის გზას გაჩვენებთ."
             price={0}
             perks={[
-              "დაჯავშნე კონსულტაცია უფასოდ და მიიღე გადაწყვეტილებები",
-              "გამოცდილი გუნდი",
-              
+              "დაჯავშნე კონსულტაცია უფასოდ",
+              "მიიღე რჩევები",
+              "დაიწყე წარმატებისკენ წინსვლა",
             ]}
             isPopular={false}
           />

@@ -107,6 +107,11 @@ function AboutUs() {
                     <h4 className="font-bold text-left text-2xl text-white mt-4">ლუკა იაკობაშვილი</h4>
                     <h6 className="text-text-gray text-left">გრაფიკული დიზაინერი</h6>
                 </div>
+                <div className="">
+                    <img src={process.env.PUBLIC_URL+'/images/staff/team-05-variant.png'} alt="Sandro Akhvlediani" className="rounded-xl" />
+                    <h4 className="font-bold text-left text-2xl text-white mt-4">სანდრო ახვლედიანი</h4>
+                    <h6 className="text-text-gray text-left">გრაფიკული დიზაინერი/მედიის დიზაინერი</h6>
+                </div>
               </div>
         </div>
       </div>

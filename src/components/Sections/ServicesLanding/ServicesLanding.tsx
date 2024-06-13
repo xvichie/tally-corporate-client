@@ -9,11 +9,11 @@ function ServicesLanding() {
             ყველაფერი, რაც გჭირდება
           </h4>
           <h2 className="text-4xl lg:text-5xl text-black font-bold text-left mb-2 mt-2">
-            ნახე ჩვენი სერვისები და აირჩიე რაც გჭირდება
+            გაეცანი ჩვენს სერვისებს და აირჩიე შენთვის სასურველი
           </h2>
           <div className="w-10/12 h-1 bg-yellow-500 rounded-3xl mb-4"></div>
           <h5 className="text-xl text-text-gray text-left">
-            ჩვენ გვჯერა კარგი იდეების კარგ პროდუქტებად გადაქცევაში.
+            ჩვენ გვჯერა კარგი იდეების წარმატებულ პროდუქტებად გადაქცევის.
           </h5>
           <span className="text-left my-6">
             <button className="btn mr-4 bg-main-blue text-white">

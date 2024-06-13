@@ -10,7 +10,7 @@ function VideoSectionLanding() {
               გადმოგვაბარე შენი პრობლემები ჩვენ
                 <div className="w-10/12 h-1 bg-yellow-500 rounded-3xl mt-2"></div>
               </h1>
-            <h4 className='text-md text-center my-2 lg:text-lg'>მოგვანდე შენი საზრუნავი ჩვენ, და იზრუნე უფრო მნიშვნელოვან საქმეებზე</h4>
+            <h4 className='text-md text-center my-2 lg:text-lg'>მოგვანდე შენი საზრუნავი და დაუთმე მეტი ყურადღება მნიშვნელოვან საქმეებს</h4>
             <video className='my-4' src={process.env.PUBLIC_URL+'/videos/s1-lg-01.mp4'} loop controls={false} autoPlay></video>
         </div>
     </div>

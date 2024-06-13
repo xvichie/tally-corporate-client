@@ -12,7 +12,7 @@ const MainCarousel: React.FC<CarouselProps> = ({ children, interval = 3000 }) =>
 
     const updateItemsPerView = () => {
         const matchMedia = window.matchMedia("(max-width: 768px)").matches;
-        setItemsPerView(matchMedia ? 1 : 3);
+        setItemsPerView(matchMedia ? 2 : 3);
     };
 
     useEffect(() => {
@@ -50,7 +50,7 @@ const MainCarousel: React.FC<CarouselProps> = ({ children, interval = 3000 }) =>
             <div className="flex transition-transform duration-500 ease-in-out"
                  style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}>
                 {React.Children.map(children, (child, index) => (
-                    <div className={`flex-none w-${itemsPerView === 1 ? 'full' : '1/3'}`} key={index}>
+                    <div className={`flex-none w-${itemsPerView === 1 ? 'full' : '2/3'}`} key={index}>
                         {child}
                     </div>
                 ))}

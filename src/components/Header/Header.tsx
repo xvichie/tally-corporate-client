@@ -137,6 +137,25 @@ function Header() {
                 ></div>
               </li>
             </Link>
+            <Link to={'/'}>
+              <li
+                className={`relative p-4 rounded-xl m-2 cursor-pointer duration-300 
+                 sm:text-sm font-bold group
+                ${scrolled ? "text-black" : "text-black"}
+                group`}
+              >
+                <span>{"აკადემია"}</span>
+                <span className="opacity-0 group-hover:opacity-100
+                transition-all duration-150 ease-in
+                absolute right-0 top-0 text-xs text-main-orange rotate-12">{"მალე"}</span>
+                <div
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-${
+                    !scrolled ? "black" : "black"
+                  } scale-x-0 
+                    origin-left transition-transform duration-300 transform group-hover:scale-x-100`}
+                ></div>
+              </li>
+            </Link>
           </ul>
           <div className="hidden xl:flex flex-row justify-center align-middle text-center items-center">
             <button
@@ -195,24 +214,68 @@ function Header() {
 
           {/* Mobile Navigation Items */}
           <div className="flex-1 flex flex-col">
-            {navItems.map((item) => (
+            <Link to={'/services'}>
               <li
-                key={item.id}
-                className="p-6 border-b rounded-xl
-                text-black font-bold 
-                            duration-300 hover:bg-black hover:text-white cursor-pointer border-black
-                            text-center"
+                  className="p-6 border-b rounded-xl
+                  text-black font-bold 
+                              duration-300 hover:bg-main-blue hover:text-white cursor-pointer border-black
+                              text-center"
               >
-                {item.text}
+                  {"სერვისები"}
               </li>
-            ))}
+            </Link>
+            <Link to={'/projects'}>
+              <li
+                  className="p-6 border-b rounded-xl
+                  text-black font-bold 
+                              duration-300 hover:bg-main-blue hover:text-white cursor-pointer border-black
+                              text-center"
+              >
+                  {"პროექტები"}
+              </li>
+            </Link>
+            <Link to={'/careers'}>
+              <li
+                  className="p-6 border-b rounded-xl
+                  text-black font-bold 
+                              duration-300 hover:bg-main-blue hover:text-white cursor-pointer border-black
+                              text-center"
+              >
+                  {"კარიერა"}
+              </li>
+            </Link>
+            <Link to={'/about'}>
+              <li
+                  className="p-6 border-b rounded-xl
+                  text-black font-bold 
+                              duration-300 hover:bg-main-blue hover:text-white cursor-pointer border-black
+                              text-center"
+              >
+                  {"ჩვენ შესახებ"}
+              </li>
+            </Link>
+            <Link to={'/'}>
+              <li
+                  className="p-6 border-b rounded-xl relative
+                  text-black font-bold group
+                    duration-300 hover:bg-main-blue hover:text-white cursor-pointer border-black
+                    text-center flex flex-col items-center"
+              >
+                  <div className="w-fit">
+                    <span className="opacity-0 group-hover:opacity-100
+                    transition-all duration-150 ease-in z-[100]
+                    absolute top-3 translate-x-16 text-xs text-main-orange rotate-12">{"მალე"}</span>
+                    {"აკადემია"}
+                  </div>
+              </li>
+            </Link>
           </div>
           <div className="flex flex-col justify-center align-middle text-center items-center">
             <div className="flex flex-col mb-4 gap-1 w-full justify-center align-middle text-center items-center">
               <button
                 className={`btn btn-outline w-[90%] text-xs
             text-black
-             hover:bg-main-red hover:text-white`}
+             hover:bg-main-blue hover:text-white`}
                 onClick={() => {
                   if (document) {
                     (
@@ -222,13 +285,13 @@ function Header() {
                 }}
               >
                 <MdMessage></MdMessage>
-                შეუკვეთე ახლავე
+                დაგვიკავშირდი
               </button>
               <button
                 className={`btn btn-outline w-[90%] text-xs 
                text-white
-               bg-black
-               hover:bg-main-red
+               bg-main-blue
+               hover:bg-main-orange
               `}
                 onClick={() => {
                   if (document) {

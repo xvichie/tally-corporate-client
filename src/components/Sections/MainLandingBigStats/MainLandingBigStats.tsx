@@ -25,6 +25,7 @@ function MainLandingBigStats() {
           title: data.title, // ensure these fields match your Firestore document structure
           description: data.description,
           thumbnailUrl: data.thumbnailUrl,
+          link: data.link
           // startDate,
           // endDate,
         };
@@ -45,8 +46,8 @@ function MainLandingBigStats() {
                     <h3 className='font-bold text-main-text-purple text-xl mb-2'>ჩვენი პროექტები:</h3>
                     <div>
                         <MainCarousel children={
-                            projects.map((project, index) =>
-                            <Link to={'/'} key={index}> 
+                            projects.reverse().map((project, index) =>
+                            <Link to={project.link} key={index} target='_blank'> 
                                 <img 
                                 className='h-24
                                 hover:cursor-pointer
@@ -61,13 +62,13 @@ function MainLandingBigStats() {
                     <div className='bg-yellow-500 py-8 flex flex-col justify-center w-[1/2] items-center'>
                         <div className="wrapper flex flex-col items-center">
                             <h1 className='text-white font-bold text-md lg:text-md text-center'>დასრულებული <br />პროექტები</h1>
-                            <h1 className='text-white font-bold text-7xl'>32</h1>
+                            <h1 className='text-white font-bold text-7xl'>17</h1>
                         </div>
                     </div>
                     <div className='bg-main-orange py-8 flex flex-col justify-center w-[1/2] items-center'>
                         <div className="wrapper flex flex-col items-center">
                             <h1 className='text-white font-bold text-md lg:text-md text-center'>მიმდინარე <br />პროექტები</h1>
-                            <h1 className='text-white font-bold text-7xl'>3</h1>
+                            <h1 className='text-white font-bold text-7xl'>2</h1>
                         </div>
                     </div>
                 </div>
