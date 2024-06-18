@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function CareerLanding() {
   return (
@@ -10,9 +11,11 @@ function CareerLanding() {
           <div className="w-11/12 h-1 bg-yellow-500 rounded-3xl mb-4"></div>
           <h5 className='text-xl text-left text-text-gray'>ჩვენ ყოველთვის გვსურს ახალი ტალანტის შემოერთება ჩვენს გუნდში</h5>
           <span className='text-left my-6'>
-            <button className='btn mr-4 bg-main-blue text-white'>
-                ვაკანსიების ნახვა
-            </button>
+            <Link to={'/careers'}>
+              <button className='btn mr-4 bg-main-blue text-white'>
+                  ვაკანსიების ნახვა
+              </button>
+            </Link>
             {/* <button className='btn btn-outline'>
                 Try It Now
             </button> */}

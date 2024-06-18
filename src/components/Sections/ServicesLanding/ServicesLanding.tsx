@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ServicesLanding() {
   return (
@@ -16,9 +17,11 @@ function ServicesLanding() {
             ჩვენ გვჯერა კარგი იდეების წარმატებულ პროდუქტებად გადაქცევის.
           </h5>
           <span className="text-left my-6">
+            <Link to={'/services'}>
             <button className="btn mr-4 bg-main-blue text-white">
               სერვისების ნახვა
             </button>
+            </Link>
             {/* <button className="btn btn-outline">Try It Now</button> */}
           </span>
         </div>

@@ -159,7 +159,7 @@ function Header() {
           </ul>
           <div className="hidden xl:flex flex-row justify-center align-middle text-center items-center">
             <button
-              className={`btn btn-outline my-4 w-8/12 text-xs mr-4 p-2
+              className={`btn btn-outline my-4 w-full text-xs mr-4 p-2
             text-main-blue
              hover:bg-main-blue hover:text-white`}
              onClick={() => {
@@ -172,7 +172,7 @@ function Header() {
               <MdMessage></MdMessage>
               დაგვეკონტაქტეთ
             </button>
-            <button
+            {/* <button
               className={`btn btn-outline w-5/12 text-xs p-2 
                text-white
                bg-main-blue
@@ -181,7 +181,7 @@ function Header() {
             >
               <LuPencilRuler></LuPencilRuler>
               შესვლა
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -277,17 +277,16 @@ function Header() {
             text-black
              hover:bg-main-blue hover:text-white`}
                 onClick={() => {
-                  if (document) {
-                    (
-                      document.getElementById("order_modal") as HTMLFormElement
-                    ).showModal();
+                  const element = document.getElementById(`footer-contact`);
+                  if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
               >
                 <MdMessage></MdMessage>
                 დაგვიკავშირდი
               </button>
-              <button
+              {/* <button
                 className={`btn btn-outline w-[90%] text-xs 
                text-white
                bg-main-blue
@@ -303,7 +302,7 @@ function Header() {
               >
                 <LuPencilRuler></LuPencilRuler>
                 შესვლა
-              </button>
+              </button> */}
             </div>
           </div>
         </ul>

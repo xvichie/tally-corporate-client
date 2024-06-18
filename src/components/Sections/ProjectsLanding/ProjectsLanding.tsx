@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProjectsLanding() {
   return (
@@ -23,9 +24,11 @@ function ProjectsLanding() {
             ჩვენი პორტფოლიო დაგანახებს ჩვენს შესაძლებლობებს.
           </h5>
           <span className="text-left my-6">
+            <Link to={'/projects'}>
             <button className="btn mr-4 bg-yellow-500 text-white">
               პროექტების ნახვა
             </button>
+            </Link>
             {/* <button className="btn btn-outline bg-white">Try It Now</button> */}
           </span>
         </div>
