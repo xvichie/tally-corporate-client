@@ -46,7 +46,7 @@ function MainLandingBigStats() {
                     <h3 className='font-bold text-main-text-purple text-xl mb-2'>ჩვენი პროექტები:</h3>
                     <div>
                         <MainCarousel children={
-                            projects.reverse().map((project, index) =>
+                            projects.reverse().filter((project,index) => index <= 2).map((project, index) =>
                             <Link to={project.link} key={index} target='_blank'> 
                                 <img 
                                 className='h-24
