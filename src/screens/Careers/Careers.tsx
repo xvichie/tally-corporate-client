@@ -27,7 +27,7 @@ function Careers() {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white">
       <div className="flex flex-col gap-8 my-24 items-center w-full">
         <div className="wrapper flex flex-row">
           <div className="flex flex-row justify-between gap-32 w-full">
@@ -40,9 +40,10 @@ function Careers() {
             />
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-center xl:text-left text-4xl lg:text-5xl w-full">
+                <h1 className="font-bold text-center xl:text-left text-4xl lg:text-5xl w-full text-main-blue">
                   ნახე თავისუფალი პოზიციები
                 </h1>
+                <div className="h-1 bg-yellow-500 rounded-3xl mb-4"></div>
                 <h3 className="font-semibold text-center xl:text-left text-md lg:text-lg text-text-gray">
                   დაიწყე შენი კარიერა ჩვენთან და მიიღე გამოცდილება Tech სამყაროში.
                 </h3>
@@ -50,8 +51,7 @@ function Careers() {
               <button
                 className="btn w-full my-6 lg:mb-0
               bg-main-blue text-white btn-outline
-              hover:bg-blue-500
-              transition-all duration-150 ease-in
+              hover:bg-yellow-500
               "
               >
                 ვაკანსიები
@@ -68,7 +68,7 @@ function Careers() {
         <div className="flex flex-col gap-8 items-center bg-bg-black w-full py-32">
           <div className="wrapper"> 
             <div className="flex flex-col my-6">
-              <h4 className="text-main-blue text-2xl font-bold mb-2 lg:text-3xl">
+              <h4 className="text-yellow-500 text-2xl font-bold mb-2 lg:text-3xl">
                 იპოვე შენთვის სასურველი სამსახური
               </h4>
               <h1 className="text-white text-4xl font-bold my-6 lg:text-6xl">

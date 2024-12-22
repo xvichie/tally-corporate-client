@@ -11,7 +11,7 @@ module.exports = {
         "main-white": "#F0EFEF",
         "main-green": "#23732F",
         "bg-gray":"#f4f4f5",
-        "bg-black":"#121212",
+        "bg-black":"#1d232a",
         "text-gray":"#a0a096",
         "border-gray":"#e8e8e8",
         "accent-popular":"#7761ff",

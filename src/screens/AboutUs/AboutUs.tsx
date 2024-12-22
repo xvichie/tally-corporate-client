@@ -7,12 +7,13 @@ import { GrUserWorker } from "react-icons/gr";
 
 function AboutUs() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center bg-white">
       <div className="flex flex-col gap-8 my-24 items-center">
         <div className="wrapper">
-          <h1 className="font-extrabold text-4xl lg:text-5xl text-center lg:text-left mb-8">
+          <h1 className="font-extrabold text-4xl lg:text-5xl text-center lg:text-left mb-2 text-main-blue">
             ვინ ვართ ჩვენ?
           </h1>
+          <div className="w-11/12 lg:w-4/12 h-1 bg-yellow-500 rounded-3xl mb-8"></div>
           <div className="flex flex-row justify-between gap-32">
             <img
               src={
@@ -24,43 +25,48 @@ function AboutUs() {
               "
             />
             <div className="flex flex-col justify-between">
-              <h3 className="text-lg my-4 lg:mt-0 lg:text-xl lg:font-bold">
+              <h3 className="text-lg my-4 lg:mt-0 lg:text-xl lg:font-bold text-text-gray">
                 ჩვენ ვართ ახალგაზრდებისგან დაკომპლექტებული გამოცდილი Software Solutions კომპანია, რომლის მთავარი მიზანია, შექმნას ციფრული პროდუქტები, რომლებიც მომხმარებლებს პირღიას ტოვებენ.
               </h3>
-              <div className="stats stats-vertical w-full shadow text-left">
+              <div className="stats stats-vertical w-full shadow text-left bg-main-white">
                 <div className="stat">
                   <div className="stat-figure text-primary">
                     <FaCode className="h-8 w-8" />
                   </div>
-                  <div className="stat-title">პროექტი</div>
+                  <div className="stat-title font-bold text-primary">პროექტი</div>
                   <div className="stat-value text-primary">20+</div>
-                  <div className="stat-desc">+2 ცალი ბოლო 1 თვეში</div>
+                  <div className="stat-desc text-main-orange">+2 ცალი ბოლო 1 თვეში</div>
                 </div>
 
                 <div className="stat">
                   <div className="stat-figure text-primary">
                     <GrUserWorker className="h-8 w-8" />
                   </div>
-                  <div className="stat-title">პროფესიონალი</div>
-                  <div className="stat-value text-primary">11</div>
-                  <div className="stat-desc">+1 ბოლო 1 თვეში</div>
+                  <div className="stat-title font-bold text-primary">პროექტი</div>
+                  <div className="stat-value text-primary">20+</div>
+                  <div className="stat-desc text-main-orange">+2 ცალი ბოლო 1 თვეში</div>
                 </div>
 
                 <div className="stat">
                   <div className="stat-figure text-primary">
                     <FaUserAstronaut className="w-8 h-8" />
                   </div>
-                  <div className="stat-title">კმაყოფილი კლიენტი</div>
-                  <div className="stat-value text-primary">15+</div>
-                  <div className="stat-desc">+3 ბოლო 1 თვეში</div>
+                  <div className="stat-title font-bold text-primary">პროექტი</div>
+                  <div className="stat-value text-primary">20+</div>
+                  <div className="stat-desc text-main-orange">+2 ცალი ბოლო 1 თვეში</div>
                 </div>
               </div>
               <button
                 className="btn w-full my-6 lg:mb-0
               bg-main-blue text-white
-              hover:bg-blue-500
-              transition-all duration-150 ease-in
+              hover:bg-yellow-500 hover:text-black
               "
+              onClick={() => {
+                const element = document.getElementById(`footer-contact`);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               >
                 მოგვწერე
               </button>
@@ -100,6 +106,11 @@ function AboutUs() {
                     <img src={process.env.PUBLIC_URL+'/images/staff/team-05-variant.png'} alt="Andria Khvichia" className="rounded-xl" />
                     <h4 className="font-bold text-left text-2xl text-white mt-4">ლუკა იაკობაშვილი</h4>
                     <h6 className="text-text-gray text-left">გრაფიკული დიზაინერი</h6>
+                </div>
+                <div className="">
+                    <img src={process.env.PUBLIC_URL+'/images/staff/team-05-variant.png'} alt="Sandro Akhvlediani" className="rounded-xl" />
+                    <h4 className="font-bold text-left text-2xl text-white mt-4">სანდრო ახვლედიანი</h4>
+                    <h6 className="text-text-gray text-left">გრაფიკული დიზაინერი/მედიის დიზაინერი</h6>
                 </div>
               </div>
         </div>

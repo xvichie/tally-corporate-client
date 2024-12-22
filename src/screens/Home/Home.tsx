@@ -21,7 +21,7 @@ function Home() {
       <StatsLanding />
       <VideoSectionLanding />
       {/* <ProjectShowcaseLanding /> */}
-      <PartnersLanding />
+      {/* <PartnersLanding /> */}
       <ReviewsLanding />
       <ServicesLanding />
       <ProjectsLanding />

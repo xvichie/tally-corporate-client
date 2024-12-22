@@ -1,13 +1,89 @@
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 import { Link } from "react-router-dom";
+import { number, object, string } from 'yup';
+
 
 function Footer() {
+
+  // State for each input
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [sending, setSending] = useState(false);
+
+  const [buttonText, setButtonText] = useState("გაგზავნა");
+
+  const [loading, setLoading] = useState(false);
+
+  const form = useRef<HTMLFormElement>(null);
+
+
+  let userSchema = object({
+    name: string().required(),
+    email: string().required().email(),
+    message: string().required()
+  });
+
+  const handleSendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
+    e.preventDefault();
+
+    try{
+      await userSchema.validate({
+        name: name,
+        email: email,
+        message: message
+      });
+
+      if (form.current) {
+        emailjs.sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+          form.current,
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        ).then(() => {
+          setLoading(false);
+          setButtonText('გაგზავნილია!');
+          // Reset the form if needed
+          setEmail('');
+          setName('');
+          setMessage('');
+          setTimeout(() => {
+            setButtonText('გაგზავნა');
+          }, 5000); // Reset the button text after 5 seconds
+        }).catch((e) => {
+          setLoading(false);
+          setButtonText('შეცდომაა!');
+  
+          setTimeout(() => {
+            setButtonText('გაგზავნა');
+          }, 5000); // Reset the button text after 5 seconds
+        });
+      }
+    }
+    catch(e){
+      setLoading(false);
+      setButtonText("ჩაწერეთ სწორი მონაცემები!");
+
+      setTimeout(() => {
+        setButtonText('გაგზავნა');
+      }, 5000); // Reset the button text after 5 seconds
+    }
+  };
+
   return (
     <>
-      <footer className="footer flex justify-center py-10 border-b bg-main-blue text-base-content border-base-300">
-        <div className="wrapper grid gap-2">
+      <footer className="footer flex justify-center py-10 border-b bg-main-blue text-base-content border-base-300"
+      id="footer-contact"
+      >
+        <form className="wrapper grid gap-2" ref={form}
+        onSubmit={handleSendMessage}
+        >
           <h1 className="text-3xl font-bold text-center text-main-orange">დაგვიკავშირდით</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
-            <label className="input input-bordered flex items-center gap-2">
+            <label className="input input-bordered flex items-center gap-2 bg-main-white text-bg-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -21,9 +97,12 @@ function Footer() {
                 type="text"
                 className="grow"
                 placeholder="თქვენი ელ. ფოსტა"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                name='email'
               />
             </label>
-            <label className="input input-bordered flex items-center gap-2">
+            <label className="input input-bordered flex items-center gap-2 bg-main-white text-bg-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -36,16 +115,28 @@ function Footer() {
                 type="text"
                 className="grow"
                 placeholder="თქვენი სრული სახელი და გვარი"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                name='from_name'
               />
             </label>
           </div>
           <div className="w-full">
             <textarea
-              className="textarea textarea-bordered w-full text-lg h-64"
+              className="textarea textarea-bordered w-full text-lg h-64 bg-main-white text-bg-black"
               placeholder="თქვენი მესიჯი"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+              name='message'
             ></textarea>
           </div>
-        </div>
+          <button className="btn
+          bg-main-orange text-black
+          hover:bg-yellow-500
+          " 
+          disabled={loading}
+          type="submit">{buttonText}</button>
+        </form>
       </footer>
       <footer className="footer flex justify-center bg-main-blue py-10">
         <div className="wrapper grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,18 +155,18 @@ function Footer() {
               >
                 ჩვენ შესახებ
               </Link>
-              <Link
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 უსაფრთხოების პოლიტიკა
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 მომსახურების პირობები
-              </Link>
+              </Link> */}
             </div>
           </nav>
           <nav className="flex flex-col">
@@ -151,17 +242,17 @@ function Footer() {
               >
                 კონტაქტი
               </Link>
-              <Link
+              {/* <Link
                 to="/services"
                 className="text-main-white hover:text-main-orange font-bold text-md text-left"
               >
                 LinkedIn
-              </Link>
+              </Link> */}
             </div>
           </nav>
         </div>
       </footer>
-      <footer className="footer py-4 border-t text-base-content border-base-300 flex flex-row justify-center items-center">
+      <footer className="footer py-4 border-t text-base-content border-base-300 flex flex-row justify-center items-center bg-white">
         <div className="wrapper flex flex-col lg:flex-row justify-between items-center">
           <aside className="items-center flex flex-col lg:flex-row justify-between">
             <img
@@ -170,7 +261,7 @@ function Footer() {
               className="h-12"
             />
             <p className="ml-4">
-              tally © იმედდასაყრდნობი ტექ გადაწყვეტილებები 2023-წლიდან.
+              tally © საიმედო ტექ გადაწყვეტილებები 2023-წლიდან.
             </p>
           </aside>
           <nav className="md:place-self-center md:justify-self-end">

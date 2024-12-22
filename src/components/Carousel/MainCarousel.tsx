@@ -8,6 +8,21 @@ interface CarouselProps {
 const MainCarousel: React.FC<CarouselProps> = ({ children, interval = 3000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [itemsPerView, setItemsPerView] = useState(3);
+
+    const updateItemsPerView = () => {
+        const matchMedia = window.matchMedia("(max-width: 768px)").matches;
+        setItemsPerView(matchMedia ? 2 : 3);
+    };
+
+    useEffect(() => {
+        updateItemsPerView();
+        window.addEventListener('resize', updateItemsPerView);
+
+        return () => {
+            window.removeEventListener('resize', updateItemsPerView);
+        };
+    }, []);
 
     const resetTimeout = () => {
         if (timeoutRef.current) {
@@ -19,8 +34,7 @@ const MainCarousel: React.FC<CarouselProps> = ({ children, interval = 3000 }) =>
         resetTimeout();
         timeoutRef.current = setTimeout(
             () => {
-                // Calculate the next group index by adding 3, and wrap around using modulo
-                const nextIndex = (currentIndex + 3) % children.length;
+                const nextIndex = (currentIndex + itemsPerView) % children.length;
                 setCurrentIndex(nextIndex);
             },
             interval
@@ -29,14 +43,14 @@ const MainCarousel: React.FC<CarouselProps> = ({ children, interval = 3000 }) =>
         return () => {
             resetTimeout();
         };
-    }, [currentIndex, children.length, interval]);
+    }, [currentIndex, children.length, interval, itemsPerView]);
 
     return (
         <div className="relative overflow-hidden w-full">
             <div className="flex transition-transform duration-500 ease-in-out"
-                 style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}>
+                 style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}>
                 {React.Children.map(children, (child, index) => (
-                    <div className="flex-none w-1/3" key={index}> {/* Each child now takes up 1/3 of the width */}
+                    <div className={`flex-none w-${itemsPerView === 1 ? 'full' : '2/3'}`} key={index}>
                         {child}
                     </div>
                 ))}
